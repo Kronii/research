@@ -16,7 +16,7 @@
                 <li> In case of additional questions please contact me at urh.meza@gmail.com. </li>
             </ol>
             <br />
-            <form id="agree-form" method="post" action="iagree">
+            <form id="iagree-form" method="post" action="iagree">
                 {{ csrf_field() }}
                 <div>
                     <input type="checkbox" id="agree-box" required="required">I agree.
