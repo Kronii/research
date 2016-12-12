@@ -19,4 +19,5 @@
     	   @yield('content')
      	</div>
     </body>
+    <script src="js/checkifhundred.js"></script>
 </html>

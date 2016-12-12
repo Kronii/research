@@ -17,7 +17,16 @@ class ExperimentController extends Controller
     public function ctrloneinsert()
     {
     	//insert v bazo?
-    	return redirect('expone');
+    	return redirect('/ctrlonedivide');
+    }
+    public function ctrlonedivide()
+    {
+        return view('experiments.group_one.ctrlonedivide');
+    }
+    public function ctrlonedivideinsert()
+    {
+        //insert v bazo?
+        return redirect('expone');
     }
     public function poskus()
     {

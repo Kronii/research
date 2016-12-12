@@ -21,6 +21,7 @@ Route::get('/ctrlone', 'ExperimentController@ctrlone');
 Route::get('/expone', 'ExperimentController@expone');
 Route::get('/poskus', 'ExperimentController@poskus');
 Route::get('/random', 'ExperimentController@random');
+Route::get('/ctrlonedivide', 'ExperimentController@ctrlonedivide');
 
 
 
