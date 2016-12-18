@@ -22,12 +22,13 @@ Route::get('/expone', 'ExperimentController@expone');
 Route::get('/poskus', 'ExperimentController@poskus');
 Route::get('/random', 'ExperimentController@random');
 Route::get('/ctrlonedivide', 'ExperimentController@ctrlonedivide');
+Route::get('/exponedecisions', 'ExperimentController@exponedecisions');
 
 
 
 
 //inserts
-
+Route::get('/ctrlonedivideinsert', 'ExperimentController@ctrlonedivideinsert');
 Route::get('/ctrloneinsert', 'ExperimentController@ctrloneinsert');
 Route::post('/aboutinsert', 'AboutController@aboutinsert');
 Route::get('/cwskrinsert', 'ExperimentController@cwskrinsert');

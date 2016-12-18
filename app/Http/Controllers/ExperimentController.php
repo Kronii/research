@@ -14,6 +14,10 @@ class ExperimentController extends Controller
     {
     	return view('experiments.group_one.expone');
     }
+    public function exponedecisions()
+    {
+        return view('experiments.group_one.exponedecisions');
+    }
     public function ctrloneinsert()
     {
     	//insert v bazo?
@@ -26,7 +30,7 @@ class ExperimentController extends Controller
     public function ctrlonedivideinsert()
     {
         //insert v bazo?
-        return redirect('expone');
+        return redirect('/expone');
     }
     public function poskus()
     {
