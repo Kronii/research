@@ -3,7 +3,7 @@
 @section('content')
 <div class="row plast">
   <h1> If you would be in an on-line store and you would like to buy water, which one would you choose? </h1>
-  <form action="ctrloneinsert" methood="get">
+  <form action="ctrlsixinsert" methood="get">
     <div class="bottle col-sm-4"><button value="bottle 1"><img src="images/bottle1.jpg" class="bottle" alt="slika"></button></div>
     <div class="bottle col-sm-4"><button value="bottle 2"><img src="images/bottle2.jpg" class="bottle" alt="slika"></button></div>
     <div class="bottle col-sm-4"><button value="bottle 3"><img src="images/bottle3.jpg" class="bottle" alt="slika"></button></div>
@@ -21,9 +21,5 @@
       <li>CENA (visoka, srednja, nizka) </li>
       <li>KAKOVOST (visoka, srednja, nizka) </li>
     </ul>  
-  <div class="title" id="decisions">
-
-  </div>
 </div>
-<script src="js/decisionsone.js"></script>
 @endsection

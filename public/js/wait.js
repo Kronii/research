@@ -1,3 +1,3 @@
 $(thex).ready(function() {
-	setTimeout(function(){ window.location = 'exponedecisions'; }, 20000);
+	setTimeout(function(){ window.location = 'ctrlone'; }, 3000);
 });

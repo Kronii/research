@@ -1,13 +1,25 @@
-@extends ('layouts.app')
-
-@section('content')
-<div class="middle">
-  <div class="text col-md-12" id="thex">
-  Please look at the X in the middle of the black screen. After a couple of second you will be able to see others, who are participating in this research in real time. After couple of seconds of watching others, please choose a product you would choose if you were in an on-line store and you would like to buy water.
-  </div>
-  <div class="x col-md-12">
-    X
-  </div> 
-</div>
-<script src="js/wait.js"></script>
-@endsection
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!--
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        -->
+        <title>Laravel</title>
+    	<!-- Latest compiled and minified CSS -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/normalize.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     </head>
+    <body style = "background-color: black; color: white;">
+    	<div class="container middle">
+    	   <div class="x col-md-12" id="thex">
+		    X
+		  </div> 
+     	</div>
+    </body>
+    <script src="js/wait.js"></script>
+</html>

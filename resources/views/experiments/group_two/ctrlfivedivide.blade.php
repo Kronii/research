@@ -3,7 +3,7 @@
 @section('content')
 <div class="row plast">
   <h1> Please divide 100 points between the products, according to the probability of your product choice – You can split points between different products as you like (100 points at one product means that you would choose only this product and none of the others). </h1>
-  <form id="ctrlonedivideinsert" method="get">
+  <form id="ctrlfivedivideinsert" method="get">
     <div class="bottle col-sm-4"><img src="images/bottle1.jpg" class="bottle" alt="slika">
     <input type="number" id="bottle1" value="0">
     </div>
