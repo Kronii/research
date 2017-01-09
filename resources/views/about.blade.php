@@ -8,13 +8,13 @@
         {{ csrf_field() }}
         <div class="form-group col-sm-12">	
           <label for="age">What is your age? Please enter your current age with a number.</label><br />
-          <input type="text" id="age" required="required"><br />
+          <input type="text" id="age" name="age" required="required"><br />
       </div>
       <div class="form-group col-sm-12">
           <label for="gender">What is your gender? Please select one of the options.</label><br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Female">Female<br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Male">Male<br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Other" checked="checked">Other/Prefer not to tell<br />
+          <input type="radio" id="gender" name="gender" class="form-control" value="Female" required="required">Female<br />
+          <input type="radio" id="gender" name="gender" class="form-control" value="Male" required="required">Male<br />
+          <input type="radio" id="gender" name="gender" class="form-control" value="Other" checked="checked" required="required">Other/Prefer not to tell<br />
       </div>
       <div class="form-group col-sm-12">
           <label for="education">What is your level of education? Please select your current highest completed level of education.</label><br />
@@ -31,24 +31,24 @@
           <input type="radio" id="ethnicity" name="ethnicity" class="form-control" value="Black or African American">Black or African American<br />
           <input type="radio" id="ethnicity" name="ethnicity" class="form-control" value="Native American or American Indian">Native American or American Indian<br />
           <input type="radio" id="ethnicity" name="ethnicity" class="form-control" value="Asian / Pacific Islander">Asian / Pacific Islander<br />
-          <input type="radio" id="ethnicity" name="ethnicity" class="form-control" value="Other">Other<br />
+          <input type="radio" id="ethnicity" name="ethnicity" class="form-control" value="Other" checked="checked">Other<br />
       </div>
       <div class="form-group col-sm-12">
           <label for="employment">Please select your current employment status from the following options.</label><br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Employed for wages">Employed for wages<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Self-employed">Self-employed<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Out of work and looking for work">Out of work and looking for work<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Out of work but not currently looking for work">Out of work but not currently looking for work<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="A homemaker">A homemaker<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="A student">A student<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Military">Military<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Retired">Retired<br />
-          <input type="radio" id="employment" name="employment" class="form-control" value="Unable to work">Unable to work<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Employed for wages" required="required">Employed for wages<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Self-employed" required="required">Self-employed<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Out of work and looking for work" required="required">Out of work and looking for work<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Out of work but not currently looking for work" required="required">Out of work but not currently looking for work<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="A homemaker" required="required">A homemaker<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="A student" required="required">A student<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Military" required="required">Military<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Retired" required="required">Retired<br />
+          <input type="radio" id="employment" name="employment" class="form-control" value="Unable to work" required="required">Unable to work<br />
       </div>
       <div class="form-group col-sm-12">
-          <label for="gender">Is English your native language?</label><br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="yes">Yes<br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="no">No<br />
+          <label for="lang">Is English your native language?</label><br />
+          <input type="radio" id="lang" name="lang" class="form-control" value="yes" required="required">Yes<br />
+          <input type="radio" id="lang" name="lang" class="form-control" value="no" required="required">No<br />
       </div>
       <button type="submit" id="send-btn">Continue</button>
   </form> 

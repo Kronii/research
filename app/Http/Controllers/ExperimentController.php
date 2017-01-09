@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Session;
+
+use App\Data;
+
 class ExperimentController extends Controller
 {
 
@@ -46,16 +50,18 @@ class ExperimentController extends Controller
     }
     public function ctrltwoinsert()
     {
-        //insert v bazo
+        $bottlepicked = $_GET["bottle"];
+        $id = Session::get('id');
+        $data = Data::find(1)->where('id', $id)->update(["bottlepicked" => $bottlepicked]);
         return redirect('/ctrltwodivide');
     }
     public function ctrltwodivide()
     {
         return view('experiments.group_one.ctrltwodivide');
     }
-    public function ctrltwodivideinsert()
+    public function ctrltwodivideinsert(Request $request)
     {
-        return "kebab";
+        return $request;
         return view('/thankyou');
     }
 
@@ -299,7 +305,11 @@ class ExperimentController extends Controller
     }
     public function random()
     {
-    	$rand = 1; //rand(1,9);
+        $rand = 1; //rand(1,9);
+
+        $id = Session::get('id');
+        $data = Data::find(1)->where('id', $id)->update(["rand" => $rand]);
+
     	if($rand==2)
     	{
             $rand = "one";
