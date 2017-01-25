@@ -3,7 +3,7 @@
 @section('content')
 <div class="row plast">
   <h1> If you would be in an on-line store and you would like to buy water, which one would you choose? </h1>
-  <form action="ctrleightinsert" methood="get">
+  <form action="ctrlinsert" methood="get">
     <div class="bottle col-sm-4"><button name="bottle" value="bottle 1"><img src="images/bottle1.jpg" class="bottle" alt="slika"></button></div>
     <div class="bottle col-sm-4"><button name="bottle" value="bottle 2"><img src="images/bottle2.jpg" class="bottle" alt="slika"></button></div>
     <div class="bottle col-sm-4"><button name="bottle" value="bottle 3"><img src="images/bottle3.jpg" class="bottle" alt="slika"></button></div>
@@ -21,5 +21,14 @@
       <li>CENA (visoka, srednja, nizka) </li>
       <li>KAKOVOST (visoka, srednja, nizka) </li>
     </ul>  
+  <div class="title" id="decisions" style="visibility: hidden;">
+  </div>
 </div>
+    @if ($rand == 1)
+    <!-- nothing -->
+    @elseif ($rand == 2)
+    <script src="js/decisions.js"></script>
+    @elseif ($rand == 3)
+    <script src="js/decisionstwo.js"></script>
+    @endif
 @endsection

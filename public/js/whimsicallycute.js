@@ -1,3 +1,3 @@
 $(whimsicallycute).ready(function() {
-	setTimeout(function(){ window.location = 'ctrlfive'; }, 5000);
+	setTimeout(function(){ window.location = 'ctrl'; }, 5000);
 });

@@ -1,3 +1,3 @@
 $(thex).ready(function() {
-	setTimeout(function(){ window.location = 'ctrlone'; }, 3000);
+	setTimeout(function(){ window.location = '/ctrl'; }, 3000);
 });

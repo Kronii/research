@@ -6,7 +6,9 @@
     <div class="addressing">
         <p>
             Do you think your choices can be influenced? When it comes to setting of purchase, we are constantly influenced with the intention of changing the course of our decisions towards a certain product. According with up-to date findings, this research will try to explore our unconscious guidance systems, which can direct our behavior without our awareness. 
+            <br />
             My name is Urh Meža and I am a psychology student at University of Ljubljana (Slovenia).  I would like to inform you that your participation is voluntary and all information is confidential and will only be viewed by researchers. Only aggregated data will be reported in possible publications, meaning that your identity will always remain confidential. 
+            <br />
             If you wish to take part in the research, please check the box “I agree” and continue with the study. By doing that you agree to the following:
             <ol>
                 <li> I have read the above information, and I understand the nature and purpose of this research. </li>

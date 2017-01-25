@@ -11,119 +11,53 @@ use App\Data;
 class ExperimentController extends Controller
 {
 
-    //one
-    public function ctrlone()
+    public function ctrldivide()
     {
-    	return view('experiments.group_one.ctrlone');
+        return view('experiments.group_one.ctrldivide');
     }
-    public function expone()
+    public function ctrl()
     {
-    	return view('experiments.group_one.expone');
+        $id = Session::get('id');
+        $data = Data::find(1)->where('id', $id)->first();
+        $rand = $data->rand;
+        return view('experiments.group_one.ctrl', compact('rand'));
     }
-    public function exponedecisions()
-    {
-        return view('experiments.group_one.exponedecisions');
-    }
-    public function ctrloneinsert()
-    {
-    	//insert v bazo?
-    	return redirect('/ctrlonedivide');
-    }
-    public function ctrlonedivide()
-    {
-        return view('experiments.group_one.ctrlonedivide');
-    }
-    public function ctrlonedivideinsert(Request $request)
-    {
-        if ($request->ajax())
-        {
-            return "kebab";
-        }
-        //insert v bazo?
-        return view('/thankyou');
-    }
-
-    //two
-    public function ctrltwo()
-    {
-        return view('experiments.group_one.ctrltwo');
-    }
-    public function ctrltwoinsert()
+    public function ctrlinsert()
     {
         $bottlepicked = $_GET["bottle"];
         $id = Session::get('id');
         $data = Data::find(1)->where('id', $id)->update(["bottlepicked" => $bottlepicked]);
-        return redirect('/ctrltwodivide');
+        return redirect('/ctrldivide');
     }
-    public function ctrltwodivide()
-    {
-        return view('experiments.group_one.ctrltwodivide');
-    }
-    public function ctrltwodivideinsert(Request $request)
-    {
-        return $request;
-        return view('/thankyou');
+    public function ctrldivideinsert(Request $request)
+    {      
+        $bottle1 = $_POST['bottle1'];
+        $bottle2 = $_POST['bottle2'];
+        $bottle3 = $_POST['bottle3'];
+        $bottle4 = $_POST['bottle4'];
+        $bottle5 = $_POST['bottle5'];
+        $bottle6 = $_POST['bottle6'];
+        $bottle7 = $_POST['bottle7'];
+        $id = Session::get('id'); 
+        $data = Data::find(1)->where('id', $id)->update(["bottle1percentage" => $bottle1, "bottle2percentage" => $bottle2,"bottle3percentage" => $bottle3,"bottle4percentage" => $bottle4,"bottle5percentage" => $bottle5,"bottle6percentage" => $bottle6,"bottle7percentage" => $bottle7]);    
+        return view('experiments.thankyou');
     }
 
-    //three
-    public function ctrlthree()
-    {
-        return view('experiments.group_one.ctrlthree');
+    //one
+    public function exp()
+    {   
+        $id = Session::get('id');
+        $data = Data::find(1)->where('id', $id)->first();
+        $rand = $data->rand;
+        return view('experiments.group_one.exp', compact('rand'));
     }
-    public function expthree()
-    {
-        return view('experiments.group_one.expthree');
-    }
-    public function expthreedecisions()
-    {
-        return view('experiments.group_one.expthreedecisions');
-    }
-    public function ctrlthreeinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlthreedivide');
-    }
-    public function ctrlthreedivide()
-    {
-        return view('experiments.group_one.ctrlthreedivide');
-    }
-    public function ctrlthreedivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
-    }
+
+    //two
 
     //four
     public function noncute()
-    {
-        
+    { 
         return view('experiments.group_two.noncute');
-    }
-    public function ctrlfour()
-    {
-        return view('experiments.group_two.ctrlfour');
-    }
-    public function expfour()
-    {
-        return view('experiments.group_two.expfour');
-    }
-    public function expfourdecisions()
-    {
-        return view('experiments.group_two.expfourdecisions');
-    }
-    public function ctrlfourinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlfourdivide');
-    }
-    public function ctrlfourdivide()
-    {
-        return view('experiments.group_two.ctrlfourdivide');
-    }
-    public function ctrlfourdivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
     }
 
     //five
@@ -132,167 +66,28 @@ class ExperimentController extends Controller
         
         return view('experiments.group_two.whimsicallycute');
     }
-    public function ctrlfive()
-    {
-        return view('experiments.group_two.ctrlfive');
-    }
-    public function expfive()
-    {
-        return view('experiments.group_two.expfive');
-    }
-    public function expfivedecisions()
-    {
-        return view('experiments.group_two.expfivedecisions');
-    }
-    public function ctrlfiveinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlfivedivide');
-    }
-    public function ctrlfivedivide()
-    {
-        return view('experiments.group_two.ctrlfivedivide');
-    }
-    public function ctrlfivedivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
-    }
 
     //six
     public function kindschemacute()
     {
-        
         return view('experiments.group_two.kindschemacute');
-    }
-    public function ctrlsix()
-    {
-        return view('experiments.group_two.ctrlsix');
-    }
-    public function expsix()
-    {
-        return view('experiments.group_two.expsix');
-    }
-    public function expsixdecisions()
-    {
-        return view('experiments.group_two.expsixdecisions');
-    }
-    public function ctrlsixinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlsixdivide');
-    }
-    public function ctrlsixdivide()
-    {
-        return view('experiments.group_two.ctrlsixdivide');
-    }
-    public function ctrlsixdivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
     }
 
     //seven
     public function brandone()
-    {
-        
+    {   
         return view('experiments.group_three.brandone');
     }
-    public function ctrlseven()
-    {
-        return view('experiments.group_three.ctrlseven');
-    }
-    public function expseven()
-    {
-        return view('experiments.group_three.expseven');
-    }
-    public function expsevendecisions()
-    {
-        return view('experiments.group_three.expsevendecisions');
-    }
-    public function ctrlseveninsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlsevendivide');
-    }
-    public function ctrlsevendivide()
-    {
-        return view('experiments.group_three.ctrlsevendivide');
-    }
-    public function ctrlsevendivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
-    }
-
     //eight
     public function brandtwo()
     {
-        
         return view('experiments.group_three.brandtwo');
     }
-    public function ctrleight()
-    {
-        return view('experiments.group_three.ctrleight');
-    }
-    public function expeight()
-    {
-        return view('experiments.group_three.expeight');
-    }
-    public function expeightdecisions()
-    {
-        return view('experiments.group_three.expeightdecisions');
-    }
-    public function ctrleightinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrleightdivide');
-    }
-    public function ctrleightdivide()
-    {
-        return view('experiments.group_three.ctrleightdivide');
-    }
-    public function ctrleightdivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
-    }
-
     //nine
     public function brandthree()
     {
-        
         return view('experiments.group_three.brandthree');
     }
-    public function ctrlnine()
-    {
-        return view('experiments.group_three.ctrlnine');
-    }
-    public function expnine()
-    {
-        return view('experiments.group_three.expnine');
-    }
-    public function expninedecisions()
-    {
-        return view('experiments.group_three.expninedecisions');
-    }
-    public function ctrlnineinsert()
-    {
-        //insert v bazo?
-        return redirect('/ctrlninedivide');
-    }
-    public function ctrlninedivide()
-    {
-        return view('experiments.group_three.ctrlninedivide');
-    }
-    public function ctrlninedivideinsert()
-    {
-        //insert v bazo?
-        return view('/thankyou');
-    }
-
-
-
 
     public function poskus()
     {
@@ -300,12 +95,16 @@ class ExperimentController extends Controller
     }
     public function cwskrinsert()
     {
-    	//insert v bazo : Color Word Stroop with Keyboard Responding 
+    	$correct = $_GET['Correct'];
+        $incorrect = $_GET['Incorrect'];
+        $control = $_GET['Control'];
+        $id = Session::get('id'); 
+        $data = Data::find(1)->where('id', $id)->update(["Correct" => $correct, "Incorrect" => $incorrect,"Control" => $control]); 
     	return redirect('random');
     }
     public function random()
     {
-        $rand = 1; //rand(1,9);
+        $rand = rand(1,9);
 
         $id = Session::get('id');
         $data = Data::find(1)->where('id', $id)->update(["rand" => $rand]);
@@ -318,7 +117,7 @@ class ExperimentController extends Controller
     	else if($rand==1)
     	{  
             $rand = "two";
-    		return view('experiments.group_one.ctrltwo', compact("rand"));
+    		return view('experiments.group_one.ctrl', compact("rand"));
     	}
     	else if($rand==3)
     	{

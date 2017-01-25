@@ -21,5 +21,19 @@
 		  </div> 
      	</div>
     </body>
+    @if (($rand == 1)||($rand == 2)||($rand == 3))
+    <script src="js/wait.js"></script>
+    @elseif ($rand == 4)
+    <script src="js/waitfour.js"></script>
+    @elseif ($rand == 5)
+    <script src="js/waitfive.js"></script>
+    @elseif ($rand == 6)
+    <script src="js/waitsix.js"></script>
+    @elseif ($rand == 7)
+    <script src="js/waitseven.js"></script>
+    @elseif ($rand == 8)
+    <script src="js/waiteight.js"></script>
+    @elseif ($rand == 9)
     <script src="js/waitnine.js"></script>
+    @endif
 </html>

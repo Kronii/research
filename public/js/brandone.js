@@ -1,3 +1,3 @@
 $(brandone).ready(function() {
-	setTimeout(function(){ window.location = 'ctrlseven'; }, 5000);
+	setTimeout(function(){ window.location = 'ctrl'; }, 5000);
 });

@@ -1,7 +1,7 @@
 @extends ('layouts.app')
 
 @section('content')
-<div class="row">
+<div class="row about">
 <div>
 	Please tell us a little about yourself
 	<form id="agree-form" method="post" class="form-inline" action="aboutinsert">
@@ -11,10 +11,10 @@
           <input type="text" id="age" name="age" required="required"><br />
       </div>
       <div class="form-group col-sm-12">
-          <label for="gender">What is your gender? Please select one of the options.</label><br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Female" required="required">Female<br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Male" required="required">Male<br />
-          <input type="radio" id="gender" name="gender" class="form-control" value="Other" checked="checked" required="required">Other/Prefer not to tell<br />
+          <b>What is your gender? Please select one of the options.</b><br />
+          <input type="radio" id="Female" name="gender" class="form-control" value="Female" required="required"><label for="Female">Female</label><br />
+          <input type="radio" id="Male" name="gender" class="form-control" value="Male" required="required"><label for="Male">Male</label><br />
+          <input type="radio" id="Other" name="gender" class="form-control" value="Other" checked="checked" required="required"><label for="Other" style="text-decoration: none;">Other/Prefer not to tell</label><br />
       </div>
       <div class="form-group col-sm-12">
           <label for="education">What is your level of education? Please select your current highest completed level of education.</label><br />

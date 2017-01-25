@@ -30,6 +30,9 @@ class CreateDataTable extends Migration
             $table->string('bottle5percentage')->nullable();
             $table->string('bottle6percentage')->nullable();
             $table->string('bottle7percentage')->nullable();
+            $table->string('correct')->nullable();
+            $table->string('incorrect')->nullable();
+            $table->string('control')->nullable();
             $table->timestamps();
         });
     }

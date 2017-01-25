@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$('#ctrlonedivideinsert').on('submit', function(e) {
+	$('#ctrldivideinsert').on('submit', function(e) {
 		var bottle1 = parseInt($("#bottle1").val());
 		var bottle2 = parseInt($("#bottle2").val());
 		var bottle3 = parseInt($("#bottle3").val());
@@ -38,26 +38,6 @@ $(document).ready(function() {
         {
         	e.preventDefault();
         	alert("Seštevek procentov je manjši kot 100 in sicer je: " + bottles);
-        }
-        else
-        {
-            alert('klet gnoj');
-        	$.ajax({
-        	type: "get",
-        	url: '/ctrlonedivideinsert',
-        	data: {
-                'bottle1': bottle1,
-                'bottle2': bottle2,
-                'bottle3': bottle3,
-                'bottle4': bottle4,
-                'bottle5': bottle5,
-                'bottle6': bottle6,
-                'bottle7': bottle7
-                },
-        	success: function (result) {
-                alert("dela");
-        	   }
-            });
         }
     });
 });
